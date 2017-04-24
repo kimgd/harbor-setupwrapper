@@ -23,7 +23,10 @@ if [ ${EMAIL_SSL} ]; then sed -i '/email_ssl = false/c\email_ssl = '${EMAIL_SSL}
 if [ ${HARBOR_ADMIN_PASSWORD} ]; then sed -i '/harbor_admin_password = Harbor12345/c\harbor_admin_password = '${HARBOR_ADMIN_PASSWORD}'' harbor.cfg; fi
 if [ ${AUTH_MODE} ]; then sed -i '/auth_mode = db_auth/c\auth_mode = '${AUTH_MODE}'' harbor.cfg; fi
 if [ ${LDAP_URL} ]; then sed -i '/ldap_url = ldaps://ldap.mydomain.com/c\ldap_url = '${LDAP_URL}'' harbor.cfg; fi
+if [ ${LDAP_SEARCHDN} ]; then sed -i '/ldap_searchdn = adminaccount/c\ldap_searchdn = '${LDAP_SEARCHDN}'' harbor.cfg; fi
+if [ ${LDAP_SEARCH_PWD} ]; then sed -i '/ldap_search_pwd = password/c\ldap_search_pwd = '${LDAP_SEARCH_PWD}'' harbor.cfg; fi
 if [ ${LDAP_BASEDN} ]; then sed -i '/ldap_basedn = ou=people,dc=mydomain,dc=com/c\ldap_basedn = '${LDAP_BASEDN}'' harbor.cfg; fi
+if [ ${LDAP_FILTER} ]; then sed -i '/ldap_url = objectClass=*/c\ldap_filter = '${LDAP_FILTER}'' harbor.cfg; fi
 if [ ${LDAP_UID} ]; then sed -i '/ldap_uid = uid/c\ldap_uid = '${LDAP_UID}'' harbor.cfg; fi
 if [ ${LDAP_SCOPE} ]; then sed -i '/ldap_scope = 3/c\ldap_scope = '${LDAP_SCOPE}'' harbor.cfg; fi
 if [ ${DB_PASSWORD} ]; then sed -i '/db_password = root123/c\db_password = '${DB_PASSWORD}'' harbor.cfg; fi
