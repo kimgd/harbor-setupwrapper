@@ -1,0 +1,10 @@
+FROM mreferre/harbor-setupwrapper:0.5.0
+
+MAINTAINER test@test.com
+
+COPY ./harbor-setupwrapper.sh /harbor/
+COPY ./harbor.cfg /harbor/
+
+WORKDIR /harbor
+    
+RUN chmod +x harbor-setupwrapper.sh
