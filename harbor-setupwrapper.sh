@@ -16,7 +16,7 @@ if [ ${UI_URL_PROTOCOL} ]; then sed -i '/ui_url_protocol = http/c\\ui_url_protoc
 if [ ${EMAIL_IDENTITY} ]; then sed -i '/email_identity =/c\\email_identity = '${EMAIL_IDENTITY}'' harbor.cfg; fi 
 if [ ${EMAIL_SERVER} ]; then sed -i '/email_server = smtp.mydomain.com/c\\email_server = '${EMAIL_SERVER}'' harbor.cfg; fi 
 if [ ${EMAIL_SERVER_PORT} ]; then sed -i '/email_server_port = 25/c\\email_server_port = '${EMAIL_SERVER_PORT}'' harbor.cfg; fi 
-if [ ${EMAIL_USERNAME} ]; then sed -i '/email_username = sample_admin@mydomain.com/c\\email_username = '${EMAIL_USERNAME}'' harbor.cfg; fi 
+if [ ${EMAIL_USERNAME} ]; then sed -i '/email_username = sample_admin@mydomain.com/c\\email_username = '${EMAIL_USERNAME}'' harbor.cfg; fi
 if [ ${EMAIL_PASSWORD} ]; then sed -i '/email_password = abc/c\\email_password = '${EMAIL_PASSWORD}'' harbor.cfg; fi 
 if [ ${EMAIL_FROM} ]; then sed -i '/email_from = admin <sample_admin@mydomain.com>/c\\email_from = '${EMAIL_FROM}'' harbor.cfg; fi 
 if [ ${EMAIL_SSL} ]; then sed -i '/email_ssl = false/c\\email_ssl = '${EMAIL_SSL}'' harbor.cfg; fi 
@@ -104,6 +104,4 @@ cp /harbor/entrypointjobservice.sh /configjobservice/entrypointjobservice.sh
 
 chmod +x /configdb/entrypointdb.sh \\
 		 /configui/entrypointui.sh \\
-		 /configjobservice/entrypointjobservice.sh 
-
-
+		 /configjobservice/entrypointjobservice.sh
