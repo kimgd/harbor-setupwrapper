@@ -1,0 +1,12 @@
+FROM mreferre/harbor-setupwrapper:0.5.0
+
+MAINTAINER ji@sk.com
+
+COPY ./harbor-setupwrapper.sh /harbor/
+COPY ./harbor.cfg /harbor/
+COPY ./star.skcomms.co.kr/star.skcomms.co.kr.crt /data/cert/server.crt
+COPY ./star.skcomms.co.kr/star.skcomms.co.kr.key_ /data/cert/server.key
+
+WORKDIR /harbor
+    
+RUN chmod +x harbor-setupwrapper.sh
