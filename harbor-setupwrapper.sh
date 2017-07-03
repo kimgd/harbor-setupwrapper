@@ -44,8 +44,8 @@ if [ ${CRT_ORGANIZATIONALUNIT} ]; then sed -i '/crt_organizationalunit = organiz
 if [ ${CRT_COMMONNAME} ]; then sed -i '/crt_commonname = example.com/c\\crt_commonname = '${CRT_COMMONNAME}'' harbor.cfg; fi
 if [ ${CRT_EMAIL} ]; then sed -i '/crt_email = example@example.com/c\\crt_email = '${CRT_EMAIL}'' harbor.cfg; fi
 if [ ${PROJECT_CREATION_RESTRICTION} ]; then sed -i '/project_creation_restriction = everyone/c\\project_creation_restriction '${PROJECT_CREATION_RESTRICTION}'' harbor.cfg; fi
-if [ ${SSL_CERT} ]; then sed -i '/ssl_cert = /data/cert/server.crt/c\\ssl_cert = '${SSL_CERT}'' harbor.cfg; fi
-if [ ${SSL_CERT_KEY} ]; then sed -i '/ssl_cert_key = /data/cert/server.key/c\\ssl_cert_key = '${SSL_CERT_KEY}'' harbor.cfg; fi
+#if [ ${SSL_CERT} ]; then sed -i '/ssl_cert = /data/cert/server.crt/c\\ssl_cert = '${SSL_CERT}'' harbor.cfg; fi
+#if [ ${SSL_CERT_KEY} ]; then sed -i '/ssl_cert_key = /data/cert/server.key/c\\ssl_cert_key = '${SSL_CERT_KEY}'' harbor.cfg; fi
 
 #############################################################
 ## 	             Preparing the config files                ##
